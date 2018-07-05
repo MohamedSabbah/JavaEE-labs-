@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Registration</title>
+</head>
+<body>
+<f:view>
+<h1><b><i><u>New Memeber Registration:</u></i></b></h1>
+<h:form>
+
+				<h:panelGrid columns="2" style="margin-left: 25px; padding-top: 25px; padding-left: 25px; padding-bottom: 25px; margin-top: 25px; margin-bottom: 25px; margin-right: 25px; padding-right: 25px">
+					<b>Name</b>
+					<h:inputText style="margin-left: 40px" value="#{memebers.name}"></h:inputText>
+					<b>Password</b>
+					<h:inputSecret style="margin-left: 40px" value="#{memebers.password}"></h:inputSecret>
+					<b>First Visit?</b>
+					<h:selectBooleanCheckbox style="margin-left: 40px" value="#{memebers.visit}"></h:selectBooleanCheckbox>
+					<b>Gender</b>
+					<h:selectOneRadio style="margin-left: 40px" value="#{memebers.geneder}"><f:selectItem itemLabel="Male" itemValue="Male"></f:selectItem><f:selectItem itemLabel="Female" itemValue="Female"></f:selectItem></h:selectOneRadio>
+					<b>Contact</b>
+					<h:selectOneRadio style="margin-left: 40px" value="#{memebers.contact}"><f:selectItems value="#{memebers.contactList}"></f:selectItems></h:selectOneRadio>
+					<b>Mother Language</b>
+					<h:selectOneListbox style="margin-left: 40px; width: 147px; " value="#{memebers.mLang}"><f:selectItem itemLabel="Arabic" itemValue="Arabic"></f:selectItem><f:selectItem itemLabel="English" itemValue="English"></f:selectItem><f:selectItem itemLabel="Deutsch" itemValue="Deutsch"></f:selectItem><f:selectItem itemLabel="Dutch" itemValue="Dutch"></f:selectItem></h:selectOneListbox>
+					<b>Country</b>
+					<h:selectOneMenu style="margin-left: 40px; width: 148px; " value="#{memebers.country}"><f:selectItem itemLabel="Deutschland" itemValue="Deutschland"></f:selectItem><f:selectItem itemLabel="Egypt" itemValue="Egypt"></f:selectItem><f:selectItem itemLabel="Holland" itemValue="Holland"></f:selectItem><f:selectItem itemLabel="France" itemValue="France"></f:selectItem></h:selectOneMenu>
+					<b>Hobbies</b>
+					<h:selectManyListbox style="margin-left: 40px; width: 148px; " value="#{memebers.hobbys}"><f:selectItem itemLabel="Divivng" itemValue="Diving"></f:selectItem><f:selectItem itemLabel="Swimming" itemValue="Swimming"></f:selectItem><f:selectItem itemLabel="Reading" itemValue="Reading"></f:selectItem><f:selectItem itemLabel="Running" itemValue="Running"></f:selectItem><f:selectItem></f:selectItem></h:selectManyListbox>
+					<span/><h:commandButton value="Register" style="margin-top: 25px; margin-left: 150px" action="welcome.xhtml"></h:commandButton>
+					
+				</h:panelGrid>
+			</h:form>
+			</f:view>
+</body>
+</html>

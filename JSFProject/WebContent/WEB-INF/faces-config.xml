@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+	<converter>
+		<converter-id>DateConvert</converter-id>
+		<converter-class>convert.DateConveter</converter-class>
+	</converter>
+	<managed-bean>
+		<managed-bean-name>login</managed-bean-name>
+		<managed-bean-class>bean.Login</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>calculator</managed-bean-name>
+		<managed-bean-class>bean.Calculator</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>client</managed-bean-name>
+		<managed-bean-class>bean.Client</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>employee</managed-bean-name>
+		<managed-bean-class>bean.Employee</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>memebers</managed-bean-name>
+		<managed-bean-class>bean.Memebers</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<display-name>Intro/GUI.xhtml</display-name>
+		<from-view-id>/Intro/GUI.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>signOut</from-outcome>
+			<to-view-id>/Intro/singout.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>Intro/login/login.xhtml</display-name>
+		<from-view-id>/Intro/login/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>Fail</from-outcome>
+			<to-view-id>/Intro/login/Error.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>Intro/login/login.xhtml</display-name>
+		<from-view-id>/Intro/login/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>Success</from-outcome>
+			<to-view-id>/Intro/login/Welcome.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<validator>
+		<validator-id>emailvaledator</validator-id>
+		<validator-class>validation.EmailValidtion</validator-class>
+	</validator>
+
+</faces-config>

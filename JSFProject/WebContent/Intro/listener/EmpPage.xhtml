@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+<f:view>
+<h1>Please, Enter Employee's Data:<br /></h1>
+		<h:form>ID: <h:inputText value="#{employee.id}"></h:inputText>
+			<br /><br />First Name:<h:inputText value="#{employee.fName}"></h:inputText>
+			<br /><br />Second Name:<h:inputText value="#{employee.sName}"></h:inputText>
+			<br /><br />Salary:<h:inputText value="#{employee.salary}"></h:inputText>
+			<br /><br />
+			<h:commandButton value="Save" action="#{employee.save}"></h:commandButton>
+
+			<h:commandButton value="Info" action="#{employee.getInfo}"></h:commandButton>
+			<br /><br /><br />
+			<h:outputText value="#{employee.msg}"></h:outputText>
+			<br /><br /><br /><br /><br /><br /><br /><br />
+			<h:dataTable border="1" value="#{employee.empList}" var="employee">
+				<h:column id="column1">
+					<f:facet name="header">
+						ID
+					</f:facet>
+					#{employee.id}
+				</h:column>
+				<h:column id="column2">
+					<f:facet name="header">
+						First Name
+					</f:facet>
+					#{employee.fName}
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						Last Name
+					</f:facet>
+					#{employee.sName}
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						Salary
+					</f:facet>
+					#{employee.salary}
+				</h:column>
+				
+			</h:dataTable>
+			<br /></h:form>
+	</f:view>
+</body>
+</html>

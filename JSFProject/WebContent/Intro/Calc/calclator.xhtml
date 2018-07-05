@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+<f:view>
+	<h1> <b><i><big>Please, Enter Numbers</big></i></b><br /></h1><b>
+		</b><b><h:form><pre>First Number :   <h:inputText value="#{calculator.num1}" id="name"></h:inputText>		<h:message for="name" showDetail="true"></h:message><br /><br />Second Number :  <h:inputText value="#{calculator.num2}" id="num2"></h:inputText>  <h:message for="num2" showDetail="true"></h:message><br /><br /><br /><h:commandButton value="+" action="#{calculator.sum}"></h:commandButton><h:commandButton value="-" action="#{calculator.sub}"></h:commandButton><h:commandButton value="*" action="#{calculator.multi}"></h:commandButton			><h:commandButton value="/" action="#{calculator.divi}"></h:commandButton><h:commandButton value="%" action="#{calculator.remaider}"></h:commandButton><h:commandButton value="^" action="#{calculator.pow}"></h:commandButton></pre></h:form></b><b>
+	</b>
+		<h:form>result:<h:outputText value="#{calculator.result}"></h:outputText>
+		</h:form>
+	</f:view>
+</body>
+</html>
